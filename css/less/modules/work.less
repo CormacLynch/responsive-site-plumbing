@@ -1,0 +1,57 @@
+// ==========================================================================
+// work (work)
+// ==========================================================================
+
+/*doc
+---
+title: work
+name: work
+category: basics
+---
+ ```html_example
+<div class="work l-col-12 l-content l-padding">
+	<p>This is a work</p>
+</div>
+ ```
+*/
+
+.work {
+	width: 100%;
+	min-height: 250px;
+
+	.work__content-holder {
+		width: 50%;
+		float: left;
+		padding-right: 15px;
+
+		@media @sm {
+			width: 100%;
+			padding-right: 0px;
+		}
+	}
+
+	.work__title {
+		text-align: left;
+	}
+
+	.work__content {
+		text-align: left;
+	}
+
+	.work__image-holder {
+		float: left;
+		width: 50%;
+		@media @sm {
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	.work__image {
+		@media @sm {
+			text-align: left;
+		}
+	}
+}
+
+

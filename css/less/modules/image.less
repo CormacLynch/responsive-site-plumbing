@@ -1,0 +1,31 @@
+// ==========================================================================
+// image (image)
+// ==========================================================================
+
+/*doc
+---
+title: image
+name: image
+category: basics
+---
+ ```html_example
+<div class="image l-col-12 l-content l-padding">
+	<p>This is a image</p>
+</div>
+ ```
+*/
+
+.image {
+	width: 200px;
+	float: right;
+	margin-left: 20px;
+
+	@media @xs {
+		float: none;
+		width: 150px;
+		margin-left: 0px;
+		margin-bottom: 20px;
+	}
+}
+
+

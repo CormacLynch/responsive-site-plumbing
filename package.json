@@ -1,0 +1,40 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Heyday",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^5.6.18",
+    "babel-loader": "^5.3.1",
+    "babel-runtime": "^5.6.18",
+    "bootstrap": "^3.3.5",
+    "classnames": "^2.1.5",
+    "es5-shim": "~3.4.0",
+    "fbjs": "^0.3.1",
+    "gulp": "^3.9.0",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "1.0.0",
+    "gulp-less-sourcemap": "^1.4.2",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-util": "*",
+    "jquery": "^2.1.3",
+    "less-helpers": "git+ssh://git@github.com:heyday/less-helpers.git#0.5.0",
+    "matchMedia": "git+https://github.com/paulirish/matchMedia.js.git",
+    "node-libs-browser": "^0.5.2",
+    "normalize-css": "^2.3.1",
+    "react": "~0.14.0",
+    "react-bootstrap": "^0.27.1",
+    "react-dom": "~0.14.0",
+    "react-slick": "^0.8.0",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "devDependencies": {
+    "lodash": "^3.10.1"
+  }
+}

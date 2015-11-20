@@ -1,0 +1,78 @@
+// ==========================================================================
+// carousel (carousel)
+// ==========================================================================
+
+/*doc
+---
+title: carousel
+name: carousel
+category: basics
+---
+ ```html_example
+<div class="carousel l-col-12 l-content l-padding">
+	<p>This is a carousel</p>
+</div>
+ ```
+*/
+
+@import "bootstrap/less/carousel.less";
+
+.carousel {
+
+	.item {
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.carousel-inner {
+		position: relative;
+	}
+
+	.carousel-indicators {
+		bottom: -50px;
+
+		li {
+			border: 1px solid @bg-primary;
+		}
+
+		.active {
+			background-color: @bg-primary;
+		}
+	}
+
+	.right {
+		background-image: none;
+	}
+
+	.left {
+		background-image: none;
+	}
+
+	.icon {
+		color: @bg-primary;
+		font-weight: bold;
+		font-size: 80px;
+		top: 40%;
+	}
+
+	.carousel__image {
+		min-height: 280px;
+
+		@media @sm {
+			min-height: 200px;
+		}
+	}
+
+	.carousel__title {
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 20px;
+		color: @font-light;
+		font-weight: bold;
+		font-size: 22px;
+	}
+
+}
+
+
