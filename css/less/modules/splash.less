@@ -1,0 +1,49 @@
+// ==========================================================================
+// splash (splash)
+// ==========================================================================
+
+/*doc
+---
+title: splash
+name: splash
+category: basics
+---
+ ```html_example
+<div class="splash l-col-12 l-content l-padding">
+	<p>This is a splash</p>
+</div>
+ ```
+*/
+
+.splash {
+	text-align: center;
+	height: 400px;
+	background-image: url(../images/splash.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0px;
+	background-position: bottom right;
+
+	h1 {
+		color: @font-light;
+		display: -webkit-flex;
+	}
+
+	@media @md {
+		height: 350px;
+	}
+
+	@media @sm {
+		height: 275px;
+	}
+
+	@media @xs {
+		height: 200px;
+	}
+}
+
+

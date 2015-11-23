@@ -1,6 +1,7 @@
 var initCarousel = require('./modules/carousel/init');
 var initWork = require('./modules/work/init');
 var initAnchor = require( './modules/anchor/anchor' );
+var initMoblieNav = require( './modules/mobileNav/mobileNav' );
 
 /**
  * Run a callback if a selector matches, passing the matched element as an argument
@@ -19,7 +20,12 @@ function runWithElement(selector: string, callback) {
 function run() {
 
 	runWithElement('[data-anchor]', element => {
+		var width = window.innerWidth;
 		initAnchor(element);
+
+		if (width < 768) {
+			initMoblieNav(element);
+		}
 	});
 
 	runWithElement('[data-carousel]', element => {
