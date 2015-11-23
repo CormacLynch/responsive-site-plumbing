@@ -17,7 +17,7 @@ category: basics
 
 .splash {
 	text-align: center;
-	height: 400px;
+	height: 375px;
 	background-image: url(../images/splash.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -26,11 +26,12 @@ category: basics
 	align-items: center;
 	justify-content: center;
 	border-radius: 0px;
-	background-position: bottom right;
+	background-position: right center;
 
 	h1 {
 		color: @font-light;
 		display: -webkit-flex;
+		font-weight: bold;
 	}
 
 	@media @md {
@@ -43,6 +44,7 @@ category: basics
 
 	@media @xs {
 		height: 200px;
+		background-position: 65% center;
 	}
 }
 
