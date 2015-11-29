@@ -26,6 +26,23 @@
 
 	.nav__menu {
 		display: none;
+
+		&.nav__menu--active {
+			.nav__burger-dash {
+				border-top-color: transparent;
+				&:before {
+					.transform( rotate( 45deg ) );
+					left: -35%;
+				}
+				&:after {
+					.transform( rotate( -45deg ) );
+					left: 35%;
+				}
+				&:before, &:after {
+					top: 2px;
+				}
+			}
+		}
 	}
 
 	.nav__name {
@@ -37,15 +54,45 @@
 	.nav__burger {
 		float: right;
 		padding-top: 3px;
-		padding-left: 5px;
 	}
 
 	.nav__burger-dash {
+		height: 20px;
 		width: 20px;
-		height: 2px;
-		background-color: @font-primary;
-		display: block;
-		margin-bottom: 3px;
+		border-top: 2px solid @bg-primary;
+		margin-left: 5px;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		top: -1px;
+		.transition( border 0.2s );
+
+		&:before {
+			content: '';
+			border-top: 2px solid @bg-primary;
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 4px;
+			height: 20px;
+			width: 20px;
+		}
+
+		&:after {
+			content: '';
+			border-top: 2px solid @bg-primary;
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 10px;
+			height: 20px;
+			width: 20px;
+		}
+
+		&:before, &:after {
+			.transform( rotate( 0deg ) );
+			.transition( all 0.3s );
+		}
 	}
 
 	.nav__content {
@@ -73,7 +120,7 @@
 			display: block;
 			position: absolute;
 			top: 15px;
-			right: 15px;
+			right: 10px;
 		}
 
 		.nav__item {

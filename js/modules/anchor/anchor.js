@@ -15,6 +15,7 @@ function Anchor( el ) {
 		}
 
 		if($( '[data-nav-content]' ).is(":visible")) {
+			$('[data-nav-trigger]').removeClass('nav__menu--active');
 			$( '[data-nav-content]' ).slideUp();
 		}
 
