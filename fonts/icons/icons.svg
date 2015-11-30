@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="icons" horiz-adv-x="282.8">
+    <font-face font-family="icons"
+      units-per-em="282.8" ascent="282.8"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="carat"
+      unicode="&#xE001;"
+      horiz-adv-x="282.8" d=" M86.6409894736842 282.9637263157895L53.7022315789474 250.0324105263158L161.806252631579 141.9358315789474L53.7022315789474 33.8690210526316L86.6409894736842 0.8930526315789L227.6837684210527 141.9358315789474z" />
+    <glyph glyph-name="close"
+      unicode="&#xE002;"
+      horiz-adv-x="282.8" d=" M282.8 237.1L237.1 282.8L141.4 187.1L45.7 282.8L0 237.1L95.7 141.4L0 45.7L45.7 0L141.4 95.7L237.1 0L282.8 45.7L187.1 141.4z" />
+  </font>
+</defs>
+</svg>
