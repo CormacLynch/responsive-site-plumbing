@@ -16,10 +16,11 @@ category: basics
 */
 
 .splash {
+	position: relative;
 	text-align: center;
-	height: 400px;
+	height: 300px;
 	background-image: url(../images/splash.jpeg);
-	background-repeat: no-repeat;
+	background-repeat: ;
 	background-size: cover;
 	margin-bottom: 20px;
 	display: flex;
@@ -28,18 +29,20 @@ category: basics
 	border-radius: 0px;
 	background-position: right center;
 
+	.splash__overlay {
+		background: rgba(0, 0, 0, 0.2);
+		height: 100%;
+		width:100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
 	h1 {
 		color: @font-light;
 		display: -webkit-flex;
 		font-weight: bold;
-	}
-
-	@media @md {
-		height: 350px;
-	}
-
-	@media @sm {
-		height: 275px;
+		z-index: 1;
 	}
 
 	@media @xs {

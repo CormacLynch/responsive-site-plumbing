@@ -1,45 +1,70 @@
-var initCarousel = require('./modules/carousel/init');
-var initWork = require('./modules/work/init');
-var initAnchor = require( './modules/anchor/anchor' );
-var initMoblieNav = require( './modules/mobileNav/mobileNav' );
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Carousel from './modules/carousel/init'
+import Work from './modules/work/init'
+import Anchor from './modules/anchor/anchor'
+import MoblieNav from'./modules/mobileNav/mobileNav'
+import DesktopNavigation from'./modules/navigation/DesktopNavigation'
+import Footer from'./modules/components/Footer'
 
-/**
- * Run a callback if a selector matches, passing the matched element as an argument
- *
- * @param string selector
- * @param callable callback - function(element: DOMElement)
- */
-function runWithElement(selector: string, callback) {
-	var element = document.querySelector(selector);
+window._touch = window.innerWidth < 992
 
-	if (element) {
-		callback(element);
+window.addEventListener('DOMContentLoaded', function() {
+
+	// navigation
+	let navigationEl = document.querySelector('[data-navigation]')
+
+	if (navigationEl) {
+		// if (window._touch) {
+		// 	console.log('mobile nav')
+		// } else {
+			ReactDOM.render(<DesktopNavigation />, navigationEl)
+		// }
 	}
-}
 
-function run() {
+	// footer
+	let footerEl = document.querySelector('[data-footer]')
 
-	runWithElement('[data-anchor]', element => {
-		var width = window.innerWidth;
-		initAnchor(element);
+	if (footerEl) {
+		ReactDOM.render(<Footer />, footerEl)
+	}
+})
+// function runWithElement(selector: string, callback) {
+// 	var element = document.querySelector(selector);
 
-		if (width < 768) {
-			initMoblieNav(element);
-		}
-	});
+// 	if (element) {
+// 		callback(element);
+// 	}
+// }
 
-	runWithElement('[data-carousel]', element => {
-		initCarousel(element);
-	});
+// function run() {
 
-	runWithElement('[data-work]', element => {
-		initWork(element);
-	});
+// 	runWithElement('[data-anchor]', element => {
+// 		var width = window.innerWidth;
+// 		initAnchor(element);
 
-}
+// 		if (width < 768) {
+// 			initMoblieNav(element);
+// 		}
+// 	});
 
-if (window.addEventListener) {
-	window.addEventListener('DOMContentLoaded', run);
-} else {
-	window.attachEvent('onload', run);
-}
+// 	runWithElement('[data-carousel]', element => {
+// 		initCarousel(element);
+// 	});
+
+// 	runWithElement('[data-navigation]', element => {
+// 		// initCarousel(element);
+// 		console.log('found')
+// 	});
+
+// 	runWithElement('[data-work]', element => {
+// 		initWork(element);
+// 	});
+
+// }
+
+// if (window.addEventListener) {
+// 	window.addEventListener('DOMContentLoaded', run);
+// } else {
+// 	window.attachEvent('onload', run);
+// }

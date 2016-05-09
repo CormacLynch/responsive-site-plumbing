@@ -17,18 +17,33 @@ category: basics
 
 .footer {
 	background-color: @bg-light;
-	padding: 10px 0px 20px 0px;
 
 	.footer__logos {
 		text-align: center;
-		padding: 10px 0px;
+		padding-top: 10px;
 	}
 
 	.footer__copy {
+		background: @bg-secondary;
+		background: -webkit-linear-gradient(lighten(@bg-secondary, 15%), @bg-secondary);
+		background: -o-linear-gradient(lighten(@bg-secondary, 15%), @bg-secondary);
+		background: -moz-linear-gradient(lighten(@bg-secondary, 15%), @bg-secondary);
+		background: linear-gradient(lighten(@bg-secondary, 15%), @bg-secondary);
 		text-align: center;
+		padding: 15px;
 
 		copyright {
+			color: @font-light;
 			font-size: 14px;
+
+			a {
+				color: @font-light;
+
+				&:hover,
+				&:focus {
+					color: lighten(@font-secondary, 20%);
+				}
+			}
 		}
 	}
 }

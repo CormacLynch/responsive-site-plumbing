@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="header">
+		<div class="header" data-navigation>
 			<a href="/">
 				<img class="header__logo" src="images/logo.png" alt="Shane Lynch Plumbing & Heating Logo">
 			</a>
@@ -21,15 +21,11 @@
 				<div class="nav nav--desktop">
 					<div class="l-col-12 l-content h-clearfix l-padding">
 						<div class="nav__inner">
-							<a class="nav__item" href="#about" data-anchor-trigger>About</a>
-							<a class="nav__item" href="#gallery" data-anchor-trigger>Gallery</a>
-							<a class="nav__item" href="#past" data-anchor-trigger>Past Projects</a>
-							<a class="nav__item" href="#services" data-anchor-trigger>Services</a>
-							<a class="nav__item" href="#contact" data-anchor-trigger>Contact</a>
+							<a class="nav__item" href="#about" data-anchor-trigger>Navigation</a>
 						</div>
 					</div>
 				</div>
-				<div class="nav nav--mobile">
+				<!-- <div class="nav nav--mobile">
 					<a class="nav__menu" href="#" data-nav-trigger>
 						<span class="nav__name">Menu</span>
 						<div class="nav__burger">
@@ -38,18 +34,15 @@
 					</a>
 					<div class="nav__content l-col-12 l-content h-clearfix l-padding" data-nav-content>
 						<div class="nav__inner">
-							<a class="nav__item" href="#about" data-anchor-trigger>About</a>
-							<a class="nav__item" href="#gallery" data-anchor-trigger>Gallery</a>
-							<a class="nav__item" href="#past" data-anchor-trigger>Past Projects</a>
-							<a class="nav__item" href="#services" data-anchor-trigger>Services</a>
-							<a class="nav__item" href="#contact" data-anchor-trigger>Contact</a>
+							<a class="nav__item" href="#about" data-anchor-trigger>Navigation</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="section section--mobile">
-			<div class="splash l-content h-clearfix">
+			<div class="splash">
+				<div class="splash__overlay"></div>
 				<h1>Plumbing at it's finest</h1>
 			</div>
 			<a id="about"></a>
@@ -69,7 +62,7 @@
 				<h2>Gallery</h2>
 			</div>
 			<div class="l-col-12 l-padding l-content h-clearfix">
-				<div data-carousel></div>
+				<!-- <div data-carousel></div> -->
 			</div>
 		</div>
 		<div class="section section--padding">
@@ -78,7 +71,7 @@
 				<h2>Past Projects</h2>
 			</div>
 			<div class="l-col-12 l-padding l-content h-clearfix">
-				<div data-work></div>
+				<!-- <div data-work></div> -->
 			</div>
 		</div>
 		<div class="section services">
@@ -139,17 +132,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<div class="l-col-12 l-content l-padding h-clearfix footer__logos">
-				<img src="images/logos.jpg" alt="Shane Lynch Plumbing & Heating Logo">
-			</div>
-			<div class="l-col-12 l-content l-padding h-clearfix footer__copy">
-				<copyright>© <script>document.write(new Date().getFullYear())</script> by <a href="http://linkedin.cormaclynch.net">Cormac Lynch.</a> All rights reserved.</copyright>
-			</div>
-		</div>
+		<div class="footer" data-footer></div>
 	</div>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5654e791eca977b3" async="async"></script>
+	<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5654e791eca977b3" async="async"></script> -->
 	<script src="js/bundle-index.js"></script>
+
+	<script>
+		window._navigation = ['Gallery','Projects', 'Services', 'Contact']
+	</script>
 
 </body>
 </html>
