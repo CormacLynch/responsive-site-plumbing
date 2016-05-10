@@ -9,10 +9,14 @@ import ReactDOM from 'react-dom'
  * @className DesktopNavigation
  */
 class DesktopNavigation extends React.Component {
-	constructor() {
+	constructor(props) {
 		super()
+
+		let {data} = props
+
 		this.state = {
-			navigationItems: window._navigation
+			navigationItems: window._navigation,
+			current: data
 		}
 	}
 
@@ -35,11 +39,14 @@ class DesktopNavigation extends React.Component {
 
 	renderNavigationItems() {
 		return this.state.navigationItems.map(function(item, i) {
-			let link = '#' + item.toLowerCase()
+			let linkName = item.toLowerCase()
+			let webLink = linkName + '.html'
+			let classes = this.state.current === linkName ? 'nav__item nav__item--current' : 'nav__item'
+
 			return (
-				<a key={'navigation__item--' + i} className="nav__item" href={link}>{item}</a>
+				<a key={'navigation__item--' + i} className={classes} href={webLink}>{item}</a>
 			)
-		})
+		}.bind(this))
 	}
 };
 

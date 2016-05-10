@@ -6,10 +6,23 @@ import Anchor from './modules/anchor/anchor'
 import MoblieNav from'./modules/mobileNav/mobileNav'
 import DesktopNavigation from'./modules/navigation/DesktopNavigation'
 import Footer from'./modules/components/Footer'
+import Splash from'./modules/components/Splash'
 
 window._touch = window.innerWidth < 992
+window._location = window.location
 
 window.addEventListener('DOMContentLoaded', function() {
+	let currentURL = null
+	let pathname = window._location.pathname
+	let pathnameSplit = pathname.split('/');
+	let htmlString = pathnameSplit[pathnameSplit.length - 1]
+	let htmlStringSplit = htmlString.split('.');
+	currentURL = htmlStringSplit[0]
+
+	var navigationLowecase = [];
+	for (var i = 0; i < window._navigation.length; i++) {
+		navigationLowecase.push(window._navigation[i].toLowerCase());
+	}
 
 	// navigation
 	let navigationEl = document.querySelector('[data-navigation]')
@@ -18,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		// if (window._touch) {
 		// 	console.log('mobile nav')
 		// } else {
-			ReactDOM.render(<DesktopNavigation />, navigationEl)
+			ReactDOM.render(<DesktopNavigation data={currentURL}/>, navigationEl)
 		// }
 	}
 
@@ -27,6 +40,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	if (footerEl) {
 		ReactDOM.render(<Footer />, footerEl)
+	}
+
+	// splash
+	let splashEl = document.querySelector('[data-splash]')
+
+	if (splashEl) {
+		ReactDOM.render(<Splash current={currentURL} navigation={navigationLowecase}/>, splashEl)
 	}
 })
 // function runWithElement(selector: string, callback) {

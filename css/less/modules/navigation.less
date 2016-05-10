@@ -30,9 +30,13 @@
 		color: @font-light;
 		border-bottom: 3px solid @font-secondary;
 
+		&.nav__item--current {
+			border-bottom: 3px solid lighten(@font-secondary, 40%);
+		}
+
 		&:hover,
 		&:focus {
-			border-bottom: 3px solid lighten(@font-secondary, 20%)
+			border-bottom: 3px solid lighten(@font-secondary, 20%);
 		}
 	}
 
